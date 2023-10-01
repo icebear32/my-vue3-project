@@ -4,7 +4,9 @@ import { ref } from 'vue'
 const activeIndex = ref(0)
 
 const onChange: UniHelper.SwiperOnChange = (ev) => {
-  console.log(ev.detail.current)
+  // console.log(ev.detail?.current)
+  // ! 非空断言，主观上排除掉空值情况
+  activeIndex.value = ev.detail!.current
 }
 </script>
 
