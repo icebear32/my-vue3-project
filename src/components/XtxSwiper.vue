@@ -39,17 +39,14 @@ const props = defineProps<{
 </template>
 
 <style lang="scss">
-:host {
-  display: block;
-  height: 280rpx;
-}
 /* 轮播图 */
 .carousel {
-  height: 100%;
+  height: 280rpx;
   position: relative;
   overflow: hidden;
   transform: translateY(0);
   background-color: #efefef;
+
   .indicator {
     position: absolute;
     left: 0;
@@ -57,6 +54,7 @@ const props = defineProps<{
     bottom: 16rpx;
     display: flex;
     justify-content: center;
+
     .dot {
       width: 30rpx;
       height: 6rpx;
@@ -64,10 +62,12 @@ const props = defineProps<{
       border-radius: 6rpx;
       background-color: rgba(255, 255, 255, 0.4);
     }
+
     .active {
       background-color: #fff;
     }
   }
+
   .navigator,
   .image {
     width: 100%;
